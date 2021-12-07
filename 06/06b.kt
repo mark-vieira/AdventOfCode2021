@@ -6,7 +6,7 @@ fun main() {
             counts[age - 1] = counts.getOrDefault(age - 1, 0) + counts.getOrDefault(age, 0)
             counts[age] = 0
         }
-        counts[8] = counts.getOrDefault(8, 0) + new
+        counts[8] = new
         counts[6] = counts.getOrDefault(6, 0) + new
     }
 
