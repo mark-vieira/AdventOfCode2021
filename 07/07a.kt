@@ -11,7 +11,7 @@ fun main() {
     println(search(input, start, 0..max, mapper))
 }
 
-fun search(list: List<Int>, pivot: Int, range: IntRange, mapper: (List<Int>, Int) -> Int): Int {
+tailrec fun search(list: List<Int>, pivot: Int, range: IntRange, mapper: (List<Int>, Int) -> Int): Int {
     if (range.last - range.first == 1) {
         return min(mapper(list, range.first), mapper(list, range.last))
     } else {
