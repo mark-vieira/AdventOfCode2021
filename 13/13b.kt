@@ -1,8 +1,5 @@
 fun main() {
-    var grid = Array(points.maxOf { (_, y) -> y } + 1) { IntArray(points.maxOf { (x, _) -> x } + 1) }
-    points.forEach { (x, y) -> grid[y][x] = 1 }
-    instructions.forEach { grid = fold(grid, it) }
-    grid.print()
+    instructions.fold(grid) { grid, instruction -> grid.fold(instruction) }.print()
 }
 
 fun Array<IntArray>.print() {
